@@ -96,10 +96,15 @@ public class MethodRefDemo {
     }
 
     public static void evalute(List<Integer> empListID, Predicate<Integer> predicateArg) {
-        for (int empId : empListID) {
+        // for (int empId : empListID) {
+        // if (predicateArg.test(empId))
+        // System.out.println(empId);
+        // }
+
+        empListID.forEach(empId -> {
             if (predicateArg.test(empId))
                 System.out.println(empId);
-        }
+        });
     }
 
     // To demonstrate the working of Function Interface
