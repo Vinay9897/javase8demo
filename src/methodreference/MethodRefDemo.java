@@ -2,6 +2,7 @@ package methodreference;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 interface Shape {
     void Display();
@@ -51,6 +52,7 @@ class Employee {
     public static int compareByCountry(Employee emp1, Employee emp2) {
         return emp1.getCountry().compareTo(emp2.getCountry());
     }
+
 }
 
 public class MethodRefDemo {
@@ -73,5 +75,23 @@ public class MethodRefDemo {
 
         Shape s = MethodRefDemo::methodDisplay;
         s.Display();
+
+        System.out.println();
+
+        List<Integer> empListIDs = new ArrayList<>();
+        for (Employee id : empList) {
+            empListIDs.add(id.getEmpId());
+        }
+        System.out.println("Printing Even Employee Ids");
+        evalute(empListIDs, (id) -> id % 2 == 0);
+        System.out.println("Printing Odd Employee Ids");
+        evalute(empListIDs, (id) -> id % 2 == 1);
+    }
+
+    public static void evalute(List<Integer> empListID, Predicate<Integer> predicateArg) {
+        for (int empId : empListID) {
+            if (predicateArg.test(empId))
+                System.out.println(empId);
+        }
     }
 }
