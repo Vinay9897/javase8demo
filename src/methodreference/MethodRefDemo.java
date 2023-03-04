@@ -2,6 +2,7 @@ package methodreference;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 interface Shape {
@@ -86,6 +87,12 @@ public class MethodRefDemo {
         evalute(empListIDs, (id) -> id % 2 == 0);
         System.out.println("Printing Odd Employee Ids");
         evalute(empListIDs, (id) -> id % 2 == 1);
+
+        System.out.println();
+        // computeIDs
+        // for (Employee e : empList) {
+        // double sal = computeIDs(e, e1 -> {e1.getEmpId() * 1.1});
+        // }
     }
 
     public static void evalute(List<Integer> empListID, Predicate<Integer> predicateArg) {
@@ -93,5 +100,10 @@ public class MethodRefDemo {
             if (predicateArg.test(empId))
                 System.out.println(empId);
         }
+    }
+
+    // To demonstrate the working of Function Interface
+    public static double computeIDs(Employee e, Function<Employee, Double> fn) {
+        return fn.apply(e);
     }
 }
