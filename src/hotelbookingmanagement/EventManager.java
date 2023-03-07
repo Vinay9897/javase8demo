@@ -59,6 +59,13 @@ class Guest {
         this.language = language;
         this.hobby = hobby;
     }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return "Guest [" + this.name + " , " + this.date + " , " + this.country + " , " + this.language + " , "
+                + this.hobby + "]";
+    }
 }
 
 public class EventManager {
