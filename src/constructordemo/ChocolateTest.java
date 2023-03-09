@@ -6,6 +6,9 @@ class Chocolate {
     int weight;
     int cost;
 
+    // the constructor arguments and the instance variable names are the same. To
+    // differentiate between them, we have used this
+    // keyword to refer to instance variables.
     Chocolate(int barCode, String name, int weight, int cost) {
         this.barCode = barCode;
         this.name = name;
