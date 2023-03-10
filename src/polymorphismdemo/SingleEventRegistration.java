@@ -1,14 +1,14 @@
 package polymorphismdemo;
 
-public class SingleEventRegistration extends EventRegistration {
-    int participantNo;
-
-    public SingleEventRegistration(String name, String nameOfEvent, int participantNo) {
-        super(name, nameOfEvent);
+public class SingleEventRegistration extends TeamEventRegistration {
+    public SingleEventRegistration(String name, String nameOfEvent, int noOfParticipants) {
+        super(nameOfEvent, nameOfEvent, noOfParticipants, noOfParticipants);
         this.name = name;
         this.nameOfEvent = nameOfEvent;
-        this.participantNo = participantNo;
+        this.noOfParticipants = noOfParticipants;
     }
+
+    int participantNo;
 
     public int getParticipantNo() {
         return participantNo;
@@ -20,9 +20,8 @@ public class SingleEventRegistration extends EventRegistration {
 
     @Override
     public void registerEvent(String events, int baseFee) {
-        registrationFee = baseFee * participantNo;
-        System.out.println("Event name is " + events);
-        // System.out.println("Team Number is " + );
-        System.out.println("Registration Fee for SingleEvent : " + registrationFee);
+        registrationFee = baseFee * noOfParticipants;
+        System.out.println("Thank You " + name + " for your participation.Your registration fee is:" + registrationFee);
+        System.out.println("You are participant no:" + noOfParticipants);
     }
 }
