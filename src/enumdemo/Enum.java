@@ -1,7 +1,17 @@
 package enumdemo;
 
 enum Designation {
-    CEO, GeneralManager, RegionalManager, BranchManager
+    CEO(2), GeneralManager(4), RegionalManager(3), BranchManager(5);
+
+    private int noOfEmployees;
+
+    Designation(int noOfEmployees) {
+        this.noOfEmployees = noOfEmployees;
+    }
+
+    public int getNoOfEmployees() {
+        return noOfEmployees;
+    }
 }
 
 class Bank {
@@ -24,9 +34,15 @@ class Bank {
 }
 
 public class Enum {
+    public static void reportee(Designation designation) {
+        System.out.println(designation.getNoOfEmployees());
+    }
+
     public static void main(String[] args) {
         Bank bank = new Bank();
         bank.roleDefined(Designation.BranchManager);
+        Enum.reportee(Designation.BranchManager);
         bank.roleDefined(Designation.RegionalManager);
+        Enum.reportee(Designation.RegionalManager);
     }
 }
