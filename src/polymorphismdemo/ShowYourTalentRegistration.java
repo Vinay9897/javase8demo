@@ -2,7 +2,6 @@ package polymorphismdemo;
 
 public class ShowYourTalentRegistration {
     public static void main(String[] args) {
-        int baseFee = 50;
 
         EventRegistration participat1 = new SingleEventRegistration("Jenny", "Sing&Win", 1);
         participat1.registerEvent("ShakeALeg", 100);
