@@ -3,6 +3,9 @@ package staticdemo;
 public class Loan {
     // To count the number of objects created using static variable and method
     private static int loanCounter;
+    static {
+        loanCounter = 100;
+    }
     int loanNo;
     int accountNo;
     int loanAmount;
