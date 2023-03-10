@@ -19,8 +19,10 @@ public class SingleEventRegistration extends EventRegistration {
     }
 
     @Override
-    public void registerEvent() {
-        // TODO Auto-generated method stub
-        super.registerEvent();
+    public void registerEvent(String events, int baseFee) {
+        registrationFee = baseFee * participantNo;
+        System.out.println("Event name is " + events);
+        // System.out.println("Team Number is " + );
+        System.out.println("Registration Fee for SingleEvent : " + registrationFee);
     }
 }
