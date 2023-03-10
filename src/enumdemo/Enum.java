@@ -44,5 +44,9 @@ public class Enum {
         Enum.reportee(Designation.BranchManager);
         bank.roleDefined(Designation.RegionalManager);
         Enum.reportee(Designation.RegionalManager);
+
+        for (Designation designation : Designation.values()) {
+            System.out.println("Name:" + designation.name() + ", No Of Employees:" + designation.getNoOfEmployees());
+        }
     }
 }
