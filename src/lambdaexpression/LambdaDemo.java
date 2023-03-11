@@ -2,7 +2,7 @@ package lambdaexpression;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Collections;
+// import java.util.Collections;
 
 interface DemoInterface1 {
     void noArguments();

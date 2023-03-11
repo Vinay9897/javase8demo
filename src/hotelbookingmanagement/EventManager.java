@@ -2,8 +2,8 @@ package hotelbookingmanagement;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.function.Predicate;
-import java.util.stream.Collector;
+// import java.util.function.Predicate;
+// import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.ArrayList;
@@ -66,7 +66,6 @@ class Guest {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
         return "Guest [" + this.name + " , " + this.date + " , " + this.country + " , " + this.language + " , "
                 + this.hobby + "]";
     }

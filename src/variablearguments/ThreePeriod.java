@@ -15,8 +15,8 @@ public class ThreePeriod {
     }
 
     public static void main(String[] args) {
-        ThreePeriod obj1 = new ThreePeriod();
-        int[] arr1 = obj1.fdDetails(10, 20, 30);
+        // ThreePeriod obj1 = new ThreePeriod();
+        int[] arr1 = ThreePeriod.fdDetails(10, 20, 30);
         System.out.println(Arrays.toString(arr1));
     }
 }

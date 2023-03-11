@@ -52,7 +52,7 @@ class Chocolate {
 public class ChocolateTest {
     public static void main(String[] args) {
         Chocolate chocolate = new Chocolate(101, "Cadbury", 12, 10);
-        Chocolate chocolate2 = new Chocolate(102, "Hershey's", 12, 10);
+        // Chocolate chocolate2 = new Chocolate(102, "Hershey's", 12, 10);
         System.out.println(chocolate.getBarCode());
         System.out.println(chocolate.getCost());
         System.out.println(chocolate.getName());

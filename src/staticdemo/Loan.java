@@ -50,9 +50,12 @@ public class Loan {
     }
 
     public static void main(String[] args) {
-        Loan loan1 = new Loan();
-        Loan loan2 = new Loan(132, 3842, 300);
-        System.out.println(loan1.getLoanCounter());
+        // Loan loan1 = new Loan();
+        // Loan loan2 = new Loan(132, 3842, 300);
+        System.out.println(Loan.getLoanCounter()); // using class
+        System.out.println(Loan.getLoanCounter());
+        // System.out.println(loan1.getLoanCounter());
+        // System.out.println(loan2.getLoanCounter());
 
     }
 }
