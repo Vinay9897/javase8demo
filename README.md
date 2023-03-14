@@ -3,9 +3,7 @@
 
 Exception class is the superclass of all other exceptions and it extends Throwable class.
 
-Checked exceptions occur at compile time, and should be handled or declared for propagation.
 
-Unchecked exceptions occur at runtime, and need not be handled or declared for propagation.
 
 In Java, java.lang.Exception class is the superclass of all exception objects. These objects contain the stack trace and all information regarding the exception.
 
@@ -66,6 +64,29 @@ public static void divide(int x, int y) {
 }
 
 Checked Exceptions either should be handled within the catch block or declared in the throws clause of a method. Exception and its subclasses are Checked Exceptions.
+
+Checked exceptions occur at compile time, and should be handled or declared for propagation.
+
+Unchecked exceptions occur at runtime, and need not be handled or declared for propagation.
+
+User-Defined Exceptions
+
+1)By extending the Exception class, we can define a user defined exception class:
+public class MyDivException extends Exception { }
+2)Using parameterized constructor:
+public MyDivException(String message) {
+       super(message);
+}
+ 
+example:-
+public static void divide(int x, int y) throws MyDivException {
+       if(y == 0)
+           throw new MyDivException("The divisor should not be zero"); 
+       int z = x/y;
+       System.out.println(z);
+}
+ By extending the RuntimeException class the custom exception becomes unchecked.
+
 //Enums
 
 --An enum is a non-primitive data type that contains a fixed set of constants.
