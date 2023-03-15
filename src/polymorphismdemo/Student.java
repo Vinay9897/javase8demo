@@ -27,11 +27,15 @@ public class Student extends Person1 {
         // Person1 person = null;
         // person = new Student();
         // person.name = "abc";
-        System.out.println("************Person class invoked own class constructor********");
+        System.out.println("************Person class reference with invoked own class constructor********");
         Person1 person = null;
         person = new Person1();
-        System.out.println("********Person class invoked child class constructor method");
-        person = new Student();
         person.Print();
+        System.out.println("********Person class referenced with invoked child class constructor method");
+        Person1 person2 = new Student();
+        person2.Print();
+        System.out.println("********Student class referenced with invoked own class constructor method");
+        Student student = new Student();
+        student.Print();
     }
 }
