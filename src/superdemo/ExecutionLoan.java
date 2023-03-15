@@ -12,9 +12,12 @@ class Loan {
 
 class HomeLoan extends Loan {
 
-    HomeLoan(int tenure, float interestRate) {
-        super(tenure, interestRate);
+    HomeLoan() {
+        super(2, 2.5f);
+    }
 
+    HomeLoan(int tenure, float interestRate) {
+        super(2, 2.4f);// first prefrence
     }
 
     public double calculateEMI(double principle) {
@@ -29,7 +32,8 @@ class HomeLoan extends Loan {
 public class ExecutionLoan {
     public static void main(String[] args) {
         double principle = 200000;
-        HomeLoan loan = new HomeLoan(4, 4.4f);
+        HomeLoan loan = new HomeLoan(3, 2.5f); // second prefrence
+        // HomeLoan loan = new HomeLoan();
         double hloan = loan.calculateEMI(principle);
         System.out.println("HomeLoan is : " + hloan);
     }
