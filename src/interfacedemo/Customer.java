@@ -2,21 +2,21 @@ package interfacedemo;
 
 public class Customer {
     int customerID;
-    int customerName;
+    String customerName;
 
     public int getCustomerID() {
         return customerID;
     }
 
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public void setCustomerID(int string) {
+        this.customerID = string;
     }
 
-    public int getCustomerName() {
+    public String getCustomerName() {
         return customerName;
     }
 
-    public void setCustomerName(int customerName) {
-        this.customerName = customerName;
+    public void setCustomerName(String name) {
+        this.customerName = name;
     }
 }
