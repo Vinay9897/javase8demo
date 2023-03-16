@@ -1,5 +1,5 @@
 package interfacedemo;
 
-public class ExecuteLoan {
+public interface IBank {
 
 }
