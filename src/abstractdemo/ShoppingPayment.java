@@ -16,6 +16,7 @@ public class ShoppingPayment extends RRPaymentServices {
     }
 
     void payBills(double amount) {
-
+        if (paymentID.length() != 5 || paymentID.charAt(0) == 'S')
+            System.out.println(" Invalid PaymentID!!!");
     }
 }
