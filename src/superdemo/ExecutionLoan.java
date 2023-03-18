@@ -40,6 +40,8 @@ public class ExecutionLoan {
         // HomeLoan loan = new HomeLoan(3, 2.5f); // second prefrence
         HomeLoan loan = new HomeLoan();
         double hloan = loan.calculateEMI();
+
         System.out.println("HomeLoan is : " + hloan);
+        
     }
 }
