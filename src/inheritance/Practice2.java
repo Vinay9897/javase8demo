@@ -77,6 +77,8 @@ public class Practice2 {
         // }
         // System.out.println(test); // a
         // System.out.println(test.compareTo("abcd")); // 2
+        System.out.println("d".compareTo("ae")); // 3
+        System.out.println("bcde".compareTo("abcd")); // 1
     }
 }
 
