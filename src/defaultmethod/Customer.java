@@ -1,7 +1,7 @@
 package defaultmethod;
 
 interface aftersale {
-    abstract double chargeOnDelivery();
+    public abstract double chargeOnDelivery();
 }
 
 public class Customer implements aftersale {

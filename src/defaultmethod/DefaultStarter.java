@@ -10,11 +10,15 @@ package defaultmethod;
 // interfaces should explicitly select the default method implementation to be used just
 // by overriding it and the overridden method should have an explicit call to the desired default behavior.
 
+// interface can't have protected and private methods
 //interface
 interface Greeting {
     default void hello() {
         System.out.println(" hello from A");
     }
+
+    public int he(); // methods can be public,abstract
+    // variable can be public static final
 }
 
 // interface
@@ -35,5 +39,11 @@ class Greet { // comment and uncomment this class to try more possibilities
 public class DefaultStarter extends Greet implements Greeting, GreetingExtn {
     public static void main(String[] args) {
         new DefaultStarter().hello();
+    }
+
+    @Override
+    public int he() {
+        // TODO Auto-generated method stub
+        return 0;
     }
 }

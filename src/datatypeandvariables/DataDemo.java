@@ -1,0 +1,76 @@
+package datatypeandvariables;
+
+import java.util.*;
+
+public class DataDemo {
+    static float c;
+    static double d;
+
+    public static void main(String[] args) {
+        System.out.println("Byte.MIN_VALUE :" + Byte.MIN_VALUE + " Byte.MAX_VALUE :" + Byte.MAX_VALUE);
+        Byte x = Byte.MAX_VALUE; // x = 127
+        // x += 5; //operator += is undefined for the argument type(s) Byte, int
+        System.out.println(++x); // -127
+        System.out.println(++x); // -126
+        System.out.println(++x); // -125
+
+        x = Byte.MIN_VALUE; // x = -128 // java.lang.Number
+        System.out.println(x); // -128
+        System.out.println(--x);// 127
+        System.out.println(--x);// 126
+        System.out.println(--x);// 125
+
+        System.out.println("***************Integer***************");
+        System.out.println("Integer.MIN_VALUE : " + Integer.MIN_VALUE + " Integer.MAX_VALUE : " + Integer.MAX_VALUE);
+        int a = 5; // integer literal
+        // Hexadecimal Values
+        a = 0xF; // 15
+        a = 0xFF;// 255
+        a = 0XFFF;// 4095
+        System.out.println("Float.MIN_VALUE : " + Float.MIN_VALUE + " Float.MAX_VALUE : " + Float.MAX_VALUE);
+        // 32 bit, Float have precision of 7 digits
+        System.out.println("Double.MIN_VALUE : " + Double.MIN_VALUE + " Double.MAX_VALUE : " + Double.MAX_VALUE);
+        // 64 bit, Double have precision of 15-16 digit
+
+        // If value doesn't intialised will give compile time error(in methods)
+        System.out.println("Float default : " + c);
+        System.out.println("Double defalut : " + d);
+        c = 3.1434890548308438208430f; // Float have precision of 7 digits
+        d = 3.1483408482803543850348; // Double have precision of 15-16 digits
+        System.out.println("Float : " + c);
+        System.out.println("Double : " + d);
+        System.out.println(10 / 2);// integral division
+        // System.out.println(10 / 0); arithmetic Exception
+        System.out.println(0 / 0.0); // NaN
+        System.out.println(-10 / 2); // -5
+        System.out.println(8 % 2.5); // 0.5
+        System.out.println(10 / 4.0); // real division //2.5
+        System.out.println(10 / 0.0); // Infinity
+        System.out.println(-10 / 0.0);// -Infinity
+
+        System.out.println("***************Anamoly in Floating data***************");
+        double x1 = .1;
+        double x2 = .2;
+        double sum = x1 + x2;
+        System.out.printf("x1 + x2 = %f sum = %f equal= %b %n ", x1 + x2, sum, (x1 +
+                x2 == sum));
+        if (sum == .3) {
+            System.out.println("yes");
+        } else {
+            System.out.println("yes, but actually No");
+        }
+        System.out.println("***************Character***************");
+        char symbol = '\0'; //
+        symbol = '\''; // '
+        symbol = (char) 0; //
+        symbol = '\\'; // \
+        symbol = '\"'; // "
+        System.out.println(symbol);
+        System.out.println("***************String***************");// io
+        String firstName = "Vinay";
+        String lastName = "Yadav";
+        String fullName = String.format("%s %s", firstName, lastName); // java.util.Formatter
+        System.out.printf("Your full name is %s", fullName); // java.io.PrintStream
+
+    }
+}

@@ -6,12 +6,14 @@ interface D {
     public void define();
 }
 
-class A {
+public class A {
+    // constructor
     A() {
         System.out.println("A");
     }
 
-    public final void display() {
+    // if the method visibility is private then it is not accessible
+    private static final void display() {
         System.out.println("Display method in A");
     }
 
@@ -19,13 +21,18 @@ class A {
 
 class B extends A implements D {
     B() {
-        // super();
         System.out.println("B");
-        super.display();
+        display();
     }
 
+    // this method has no connection with parent method
+    private static final void display() {
+        System.out.println("sldjs");
+    }
+
+    @Override
     public void define() {
-        System.out.println("define");
+        System.out.println("define in B");
     }
 
     public static void main(String[] args) {
@@ -47,33 +54,58 @@ class B extends A implements D {
         list1.add(0);
         list1.add(0);
         list1.add(0);
+
         for (int x : list1)
             System.out.print(x + " ");
     }
 }
 
-// class Base {
-// public Base(String name) {
-// System.out.println(name);
-// }
+// learn
+// Constructor Overriding
+// Method Overriding
+class Base {
+    public Base(String name) {
+        System.out.println(name + " in BaseClass");
+    }
 
-// public static void method(int a) {
-// System.out.println("Base method");
-// }
-// }
+    public void method(int a) {
+        System.out.println("Base method");
+    }
 
-// class Derived extends Base {
+    public static void method2() {
+        System.out.println("base method 2");
+    }
+}
 
-// public Derived(String name) {
-// super(name);
-// System.out.println("Derived method");
-// }
+class Derived extends Base {
 
-// public static void method() {
-// System.out.println("Derived method");
-// }
+    public Derived(String name) {
+        super(name);
+        System.out.println(name);
+    }
 
-// public static void main(String[] args) {
-// new Derived("Bob");
-// }
-// }
+    private static void method() {
+        System.out.println("Derived method");
+    }
+
+    // public static void method2() {
+    // System.out.println("derived method 2");
+    // }
+
+    public static void main(String[] args) {
+        Base b = new Base("BaseName"); // only base constructor invoked
+        method2();
+        b.method(2);
+
+        // System.out.println("*********************************");
+        // Derived d = new Derived("DerivedName"); // parent constructor then child
+        // constructor invoked
+        // // method2();
+
+        System.out.println("*********************************");
+        Base db = new Derived("DerivedName");// parent constructor then child
+        // constructor invoked
+        method2();
+        method();
+    }
+}

@@ -1,7 +1,7 @@
 package abstractdemo;
 
 public abstract class Branch {
-    abstract public boolean validatePhotoProof(String proof);
+    abstract protected boolean validatePhotoProof(String proof);
 
     abstract public boolean validateAddressProof(String proof);
 

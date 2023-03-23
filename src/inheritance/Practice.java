@@ -4,6 +4,7 @@ public class Practice {
     String color = null;
     static int var1 = 200;
     public static final int val = 32;
+    public int val2 = 32;
 
     public static void print() {
         System.out.println(var1);
@@ -28,6 +29,7 @@ public class Practice {
         Practice p = new Practice();
         p.color = "White";
         Practice p1 = new Practice(p);
+        System.out.println(p.val2);
         System.out.println(p1.color + " " + p.color);
         int a = 10;
         int b = 20;

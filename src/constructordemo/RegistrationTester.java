@@ -8,6 +8,7 @@ class Registration {
     int licensenNo;
     long[] telephoneNo;
 
+    // constructor
     public Registration(String customerName, String passportNo, long[] telephoneNo) {
         this.customerName = customerName;
         this.passportNo = passportNo;
@@ -21,10 +22,12 @@ class Registration {
         this.telephoneNo = telephoneNo;
     }
 
+    // excessor
     public String getCustomerName() {
         return customerName;
     }
 
+    // mutator
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
@@ -65,6 +68,7 @@ class Registration {
         return telephoneNo;
     }
 
+    // method , behaviour
     public void displayTelepone() {
         for (int i = 0; i < telephoneNo.length; i++)
             System.out.print(telephoneNo[i] + " ");
