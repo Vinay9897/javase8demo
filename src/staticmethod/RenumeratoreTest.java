@@ -1,4 +1,8 @@
 package staticmethod;
+
+import staticdemo.Loan;
+// import staticdemo.Loan.*;
+
 // To demonstrate the working of static methods in an interface
 
 interface Renumerator {
@@ -18,9 +22,16 @@ interface Renumerator {
     }
 }
 
-public class RenumeratoreTest {
+public class RenumeratoreTest extends Loan {
+    RenumeratoreTest() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
     public static void main(String[] args) {
         Double pension = Renumerator.deductForPension(20000);
         System.out.println(pension);
+        Loan l = new Loan();
+        System.out.println(l.number);
     }
 }

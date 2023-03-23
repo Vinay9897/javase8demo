@@ -6,11 +6,12 @@ public class Loan {
     static {
         loanCounter = 100;
     }
+    public int number = 5;
     int loanNo;
     int accountNo;
     int loanAmount;
 
-    Loan() {
+    public Loan() {
         loanCounter++;
     }
 

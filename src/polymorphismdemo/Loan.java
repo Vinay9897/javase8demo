@@ -2,9 +2,10 @@ package polymorphismdemo;
 
 public class Loan {
     private float interest;
+    public char[] number;
 
     // constructor overloading
-    Loan() {
+    public Loan() {
         interest = 8.5f;
     }
 
