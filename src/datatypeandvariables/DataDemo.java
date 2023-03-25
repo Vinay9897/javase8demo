@@ -70,7 +70,16 @@ public class DataDemo {
         String firstName = "Vinay";
         String lastName = "Yadav";
         String fullName = String.format("%s %s", firstName, lastName); // java.util.Formatter
-        System.out.printf("Your full name is %s", fullName); // java.io.PrintStream
+        System.out.printf("Your full name is %s%n", fullName); // java.io.PrintStream
+        System.out.println("******Integral with Underscore************");
+        double num1 = 2.718; // 2.718
+        // double num2 = 2._718; // incorrect, underscore used b/w digits only
+        double num3 = 2.7_1_8; // 2.718
+        // double num4 = _2.718; // incorrect ,underscore used b/w digits only
+        System.out.printf("num1 = %f, num3 = %f%n", num1, num3);
+
+        // double num5 = 0, num6 = 0;
+        // System.out.println(num5);
 
     }
 }
