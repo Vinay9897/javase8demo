@@ -5,6 +5,8 @@ import java.util.*;
 public class DataDemo {
     static float c;
     static double d;
+    // int x = 1, y = x + 1, z;
+    // int j, k = j + 1, m = 1;
 
     public static void main(String[] args) {
         System.out.println("Byte.MIN_VALUE :" + Byte.MIN_VALUE + " Byte.MAX_VALUE :" + Byte.MAX_VALUE);
@@ -80,6 +82,16 @@ public class DataDemo {
 
         // double num5 = 0, num6 = 0;
         // System.out.println(num5);
+        // byte a1 = 3;
+        // byte b = 8;
+        // byte c = (byte) (a1 + b);
+        // System.out.println(c);
+
+        // int f = (int)3902.493;
+        int f = 2123089900;
+        short i = (byte) Short.MAX_VALUE + 9;
+        System.out.println(i);
+        byte b = (byte) 300l;
 
     }
 }
