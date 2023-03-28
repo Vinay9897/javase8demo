@@ -125,16 +125,42 @@ class Foo1 {
         // boolean boo = false;
         // if (boo = true) {
         // }
-        doStuff();
+
+        // doStuff();
+
+        // long[] la = { 7L, 8L, 9L };
+        // for(long l : la);
+        // for(int l : la); // illegal long can't store in int
+
+        // labelled for loop with break
+        // boolean isTrue = true;
+        // for (int i = 0; i < 5; i++) {
+        // outer: while (isTrue) {
+        // System.out.println("Hello");
+        // break outer;
+        // } // end of inner while loop
+        // System.out.println("Outer loop."); // Won't print
+        // } // end of outer for loop
+        // System.out.println("Good-Bye");
+
+        // unlabelled for loop with continue
+        // outer: for (int i = 0; i < 5; i++) {
+        // for (int j = 0; j < 5; j++) {
+        // System.out.println(i + "hello");
+        // continue outer;
+        // } // end of inner loop
+        // System.out.println("outer"); // Never prints
+        // }
+        // System.out.println("Good-Bye");
     }
 
-    static boolean doStuff() {
-        for (int x = 0; x < 3; x++) {
-            System.out.println("in for loop");
-            return true;
-        }
-        return true;
-    }
+    // static boolean doStuff() {
+    // for (int x = 0; x < 3; x++) {
+    // System.out.println("in for loop");
+    // return true;
+    // }
+    // return true;
+    // }
 
 }
 
