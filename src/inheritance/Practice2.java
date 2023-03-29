@@ -35,6 +35,8 @@ public class Practice2 {
         // System.out.println(s1 + " " + s2 + " " + (s1 == s2));
         // StringBuffer sb = new StringBuffer("abc");
         // StringBuffer sb2 = new StringBuffer(sb);
+        // System.out.println(sb + " " + sb2 + " " +
+        // (sb.toString().equals(sb2.toString()))); // return false,because
         // sb.append("d");
         // System.out.println(sb + " " + sb2 + " " +
         // (sb.toString().equals(sb2.toString()))); // return false,because
@@ -53,8 +55,11 @@ public class Practice2 {
         // when only when passed the same object as an argument.
         StringBuilder sb1 = new StringBuilder("Test");
         StringBuilder sb2 = new StringBuilder("Test");
-        System.out.println("Compare 2 diff stringbuilder(diff reference) " + (sb1 == sb2));
-        System.out.println("Compare 2 diff stringbuilder(diff reference) " + sb1.equals(sb2));
+        // System.out.println("Compare 2 diff stringbuilder(diff reference) " + (sb1 ==
+        // sb2));
+        // System.out.println("Compare 2 diff stringbuilder(diff reference) " +
+        // sb1.equals(sb2));// always return false,we can't check stringbuilder with
+        // equals
 
         // Question6
         // Answer :- Primitive variable can be compared with == only
@@ -71,41 +76,48 @@ public class Practice2 {
 
         // Question8
         // this.charAt(k)-anotherString.charAt(k)
-        // String test = "ad";
+        String test = "a";
         // condition: "a" not equal "aaa" so loop doesn't go inside
-        // for (; test.compareTo("aaa") == 0; test = test + "a") {
-        // System.out.println(test.length());
-        // }
-        // System.out.println(test); // a
-        // System.out.println(test.compareTo("abcd")); // 2
+        for (; test.compareTo("aaa") == 0; test = test + "a") {
+            System.out.println(test.length());
+        }
+        System.out.println(test); // a
+        System.out.println(test.compareTo("aaa")); // -2
+        System.out.println("z".compareTo("abcd")); // 25
         // System.out.println("d".compareTo("ae")); // 3
         // System.out.println("bcde".compareTo("abcd")); // 1
 
         // Question 9
-        // String st = "Java";
-        // StringBuilder sb = new StringBuilder("Java");
-        // StringBuffer sbb = new StringBuffer("Java");
-        // System.out.println(st == sb);//Incompatible operand types String and
+        String st = "Java";
+        StringBuilder sb = new StringBuilder("Java");
+        StringBuffer sbb = new StringBuffer("Java");
+        // System.out.println(st == sb);// CTE,Incompatible operand types String and
         // StringBuilder
-        // System.out.println(st == sbb);//Incompatible operand types String and
+        // System.out.println(st == sbb);//CTE,Incompatible operand types String and
         // StringBuffer
-        // System.out.println(sb == sbb);//Incompatible operand types StringBuilder and
+        // System.out.println(sb == sbb);//CTE,Incompatible operand types StringBuilder
+        // and
         // StringBuffer
         // System.out.println(st.equals(sb));
         // System.out.println(st.equals(sbb));
         // System.out.println(sb.equals(sbb));
+
         // System.out.println(st == sb.toString()); // false ,because reference are not
         // same
         // System.out.println(st == sbb.toString()); // false
         // System.out.println(sb.toString() == sbb.toString()); // false
+
         // System.out.println(st.equals(sb.toString())); // true,because equals check
         // values
         // System.out.println(st.equals(sbb.toString())); // true
         // System.out.println(sb.toString().equals(sbb.toString())); // true
-        StringBuilder s1 = new StringBuilder("a");
-        StringBuilder s2 = s1.append("a");
-        System.out.println("Compare To StringBuilder(same reference) " + (s1.equals(s2))); // true
-        System.out.println("Compare To StringBuilder(same reference) " + (s1 == s2)); // true
+
+        // StringBuilder s1 = new StringBuilder("a");
+        // StringBuilder s2 = s1.append("a");
+        // System.out.println("Compare To StringBuilder(same reference) " +
+        // (s1.equals(s2))); // true
+        // System.out.println("Compare To StringBuilder(same reference) " + (s1 == s2));
+        // // true
 
         // int i = 0, j = 11;
         // do {
@@ -115,11 +127,11 @@ public class Practice2 {
         // j--;
         // System.out.println(i + " " + j);
         // } while (++i < 5);
-        // System.out.println("String".replace('g', 'g') == new
-        // String("String"));//false
-        // System.out.println("String".replace('g', 'g') == "String"); //true
-        StringBuilder sb = new StringBuilder("stringbuilder");
-        System.out.println(sb.delete(0, sb.length()));
+
+        System.out.println("String".replace('g', 'g') == new String("String"));// false
+        System.out.println("String".replace('g', 'g') == "String"); // true
+        // StringBuilder sb = new StringBuilder("stringbuilder");
+        // System.out.println(sb.delete(0, sb.length()));
         // List li = new ArrayList();
         // li.add("ds");
         // System.out.println(li); // ds

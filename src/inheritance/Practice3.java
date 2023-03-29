@@ -164,11 +164,15 @@ class WaterBottle {
         double c4 = a + b;
         // short c5 = a + b;
         ArrayList ls = new ArrayList();
-        for(int i=0; i<10 ; ) {
-            4: i = i++;
-            5: System.out.println("Hello World");
-            6: }
-
+        for (int i = 0; i < 10;) {
+            i++;
+            System.out.println("Hello World");
+        }
+        List<String> birds = new ArrayList<>();
+        birds.add("hawk"); // [hawk]
+        birds.add("hawk"); // [hawk, hawk]
+        System.out.println(birds.remove("cardinal")); // prints false
+        System.out.println(birds.remove("hawk"));
     }
 
 }

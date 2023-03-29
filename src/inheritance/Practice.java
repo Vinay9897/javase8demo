@@ -31,6 +31,7 @@ public class Practice {
         Practice p1 = new Practice(p);
         System.out.println(p.val2);
         System.out.println(p1.color + " " + p.color);
+
         int a = 10;
         int b = 20;
         int c = 30;
@@ -62,20 +63,36 @@ public class Practice {
         int x, y = 1;
         x = 10;
         if (x != 10 && x / 0 == 0)
-            System.out.println(y);
+            System.out.println("y :" + y);
         else
             System.out.println(++y);
         System.out.println("***********************************");
         int fi = 128890;
+        float fo = 21.32f;
         String st = "pokemdjslomn";
-        System.out.printf("%15d", fi);
+        System.out.printf("|%15f|%n", fo);
+        System.out.printf("|%0,15.3f|%n", fo);
+        System.out.printf("|%,15f|%n", fo);
+        System.out.printf("|%+,15f|%n", fo);
+        System.out.printf("|%-,15f|%n", fo);
+
+        System.out.printf("|%15d|", fi);
         System.out.println();
-        System.out.printf("%0,15d", fi);
+        System.out.printf("|%0,15d|", fi);
         System.out.println();
-        System.out.printf("%+,15d", fi);
+        System.out.printf("|%,15d|", fi);
+        System.out.println();
+        System.out.printf("|%-15d|", fi);
         System.out.println();
         System.out.printf("%-20s | %0,15d %n", st, fi);
-        System.out.println("hello");
+
+        String str = "hello";
+        String str12 = "vinay";
+        System.out.printf("|%-10s| %2s %n", str, str12);
+        System.out.printf("%s, %s \n", str, str12);
+        System.out.printf("%2$s %1$s %n", str, str12);
+        System.out.printf("%2$s %2$s %n", str, str12);
+        System.out.printf("%1$s %1$s %n", str, str12);
 
     }
 }
