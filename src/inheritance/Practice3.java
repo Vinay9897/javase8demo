@@ -163,16 +163,65 @@ class WaterBottle {
         float c3 = a + b;
         double c4 = a + b;
         // short c5 = a + b;
-        ArrayList ls = new ArrayList();
-        for (int i = 0; i < 10;) {
-            i++;
-            System.out.println("Hello World");
-        }
+
+        // ArrayList ls = new ArrayList();
+        // ls.add(4);
+        // ls.add(32.7f);
+        // ls.add("r");
+        // for (Object i : ls)
+        // System.out.println(i);
+
         List<String> birds = new ArrayList<>();
         birds.add("hawk"); // [hawk]
         birds.add("hawk"); // [hawk, hawk]
-        System.out.println(birds.remove("cardinal")); // prints false
-        System.out.println(birds.remove("hawk"));
+        // System.out.println(birds.remove("cardinal")); // prints false
+        // System.out.println(birds.remove("hawk"));
+
+        String str = "diuwep";
+        str += " ";
+        System.out.println("diuwep " == str);
+        List<String> ages = new ArrayList<>();
+        ages.add(("5"));
+        ages.add(("6"));
+        // ages.add(7);
+        // ages.add(null);
+        // for (String age : ages)
+        // System.out.print(age);
+
+        StringBuilder b1 = new StringBuilder("rumble");
+        b1.append(4).deleteCharAt(3).delete(3, b1.length() - 1);
+        System.out.println(b1);
+
+        int total = 0;
+        StringBuilder letters = new StringBuilder("abcdefg");
+        total += letters.substring(1, 2).length();
+        total += letters.substring(6, 6).length();
+        // total += letters.substring(6, 5).length();
+        // System.out.println(total);
+        String s12 = "abc";
+
     }
 
+}
+
+class Rope {
+    public static void swing() {
+        System.out.print("swing ");
+    }
+
+    public static void climb() {
+        System.out.println("climb ");
+    }
+
+    public static void play() {
+        swing();
+        climb();
+    }
+
+    public static void main(String[] args) {
+        Rope rope = new Rope();
+        rope.play();
+        Rope rope2 = null;
+        rope2.play();
+    }
 }
