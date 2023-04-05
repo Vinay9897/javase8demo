@@ -71,6 +71,7 @@ class Rodent {
         System.out.println("Rodent is chewing");
         return 1;
     }
+
 }
 
 class Beaver extends Rodent {
@@ -82,10 +83,10 @@ class Beaver extends Rodent {
     public static void main(String[] args) {
         Beaver beaver = new Beaver();
         beaver.chew();
-        Rodent rodent = new Rodent();
-        Rodent.chew();
+        // Rodent rodent = new Rodent();
+        // rodent.chew();
         Rodent bRodent = new Beaver();
-        chew();
+        bRodent.chew();
     }
 }
 
