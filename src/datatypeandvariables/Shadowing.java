@@ -87,7 +87,8 @@ class Foo1 {
         // for (String str : strs)
         // System.out.println(str);
 
-        // char ch = (char) 65;
+        // char ch = 65;
+        // ch++;
         // System.out.println(ch);
 
         // int[][] a = { { 1, 2 }, { 3, 4 } };
@@ -95,7 +96,7 @@ class Foo1 {
         // System.out.println(b[0]);
         // Object o = a;
         // int[][] a2 = (int[][]) o;
-        // // int[] b2 = (int[]) o;
+        // int[] b2 = (int[]) o; //java.lang.ClassCastException
         // System.out.println(b[1]);
 
         // byte[][] ba = { { 1, 2, 3, 4 }, { 1, 2, 3 } };
@@ -130,7 +131,7 @@ class Foo1 {
 
         // long[] la = { 7L, 8L, 9L };
         // for(long l : la);
-        // for(int l : la); // illegal long can't store in int
+        // for(int +l : la); // illegal long can't store in int
 
         // labelled for loop with break
         // boolean isTrue = true;

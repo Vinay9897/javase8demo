@@ -72,7 +72,7 @@ public class DataDemo {
         String firstName = "Vinay";
         String lastName = "Yadav";
         String fullName = String.format("%s %s", firstName, lastName); // java.util.Formatter
-        System.out.printf("Your full name is %s%n", fullName); // java.io.PrintStream
+        System.out.printf("Your full name is %S%n", fullName); // java.io.PrintStream
         System.out.println("******Integral with Underscore************");
         double num1 = 2.718; // 2.718
         // double num2 = 2._718; // incorrect, underscore used b/w digits only
@@ -86,7 +86,6 @@ public class DataDemo {
         // byte b = 8;
         // byte c = (byte) (a1 + b);
         // System.out.println(c);
-
         // int f = (int)3902.493;
         int f = 2123089900;
         short i = (byte) Short.MAX_VALUE + 9;

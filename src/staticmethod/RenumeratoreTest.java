@@ -9,7 +9,7 @@ interface Renumerator {
     public abstract double deductFoodFee(); // abstract method() Must be overridden by all implementing classes
 
     // Need not be overridden
-    final double HEALTH_INSURANCE_PERCENTAGE = 5.0;
+    final public static double HEALTH_INSURANCE_PERCENTAGE = 5.0;
     final double PENSION_PERCENTAGE = 5.0;
 
     // default implemention can be redefined

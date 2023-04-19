@@ -78,18 +78,10 @@ class Cougar extends Puma {
 // System.out.print("DeerAge");
 // }
 
-// private boolean hasHorns() {
+// public boolean hasHorns() {
 // return false;
 // }
 
-// public static void main(String[] args) {
-// Reindeer deer = new Reindeer(5);
-// System.out.println("," + deer.hasHorns());
-// Deer deer = new Reindeer(5);
-// System.out.println("," + deer.hasHorns());
-// Deer deer = new Deer(5);
-// System.out.println("," + deer.hasHorns());
-// }
 // }
 
 // class Reindeer extends Deer {
@@ -101,6 +93,15 @@ class Cougar extends Puma {
 
 // public boolean hasHorns() {
 // return true;
+// }
+
+// public static void main(String[] args) {
+// Reindeer deer = new Reindeer(5);
+// System.out.println("," + deer.hasHorns());
+// Deer deer1 = new Reindeer(5);
+// System.out.println("," + deer1.hasHorns());
+// Deer deer2 = new Deer(5);
+// System.out.println("," + deer2.hasHorns());
 // }
 // }
 
@@ -164,12 +165,13 @@ class WaterBottle {
         double c4 = a + b;
         // short c5 = a + b;
 
-        // ArrayList ls = new ArrayList();
-        // ls.add(4);
-        // ls.add(32.7f);
-        // ls.add("r");
-        // for (Object i : ls)
-        // System.out.println(i);
+        ArrayList ls = new ArrayList();
+        ls.add(4);
+        ls.add(32.7f);
+        ls.add("r");
+        for (Object i : ls) {
+            System.out.println(i);
+        }
 
         List<String> birds = new ArrayList<>();
         birds.add("hawk"); // [hawk]
@@ -177,9 +179,9 @@ class WaterBottle {
         // System.out.println(birds.remove("cardinal")); // prints false
         // System.out.println(birds.remove("hawk"));
 
-        String str = "diuwep";
-        str += " ";
-        System.out.println("diuwep " == str);
+        String str = "vinay";
+        str += d;
+        System.out.println("vinayd" == str);
         List<String> ages = new ArrayList<>();
         ages.add(("5"));
         ages.add(("6"));
@@ -194,8 +196,8 @@ class WaterBottle {
 
         int total = 0;
         StringBuilder letters = new StringBuilder("abcdefg");
-        total += letters.substring(1, 2).length();
-        total += letters.substring(6, 6).length();
+        // total += letters.substring(1, 2).length();
+        // total += letters.substring(6, 6).length();
         // total += letters.substring(6, 5).length();
         // System.out.println(total);
         String s12 = "abc";

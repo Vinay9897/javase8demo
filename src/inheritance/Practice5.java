@@ -12,21 +12,21 @@ public class Practice5 {
         Integer b = 5;
         int a = --b + b--;
         System.out.println(a + " " + b);
-        // int $ = 3;
-        // System.out.println($);
-        // int True = 3;
-        // short f =4;
-        // short f1 =4;
-        // int f2= f +f1;
-        // int val = (int) (Math.random() * 3);
-        // System.out.println(val);
-        // float val1 = -28.5F;
-        // int number = (int) Math.abs(val1);
-        // number += 3;
-        // System.out.println(number);
+        int $ = 3;
+        System.out.println($);
+        int True = 3;
+        short f = 4;
+        short f1 = 4;
+        int f2 = f + f1;
+        int val = (int) (Math.random() * 3);
+        System.out.println(val);
+        float val12 = -28.5F;
+        int number = (int) Math.abs(val12);
+        number += 3;
+        System.out.println(number);
         // float val2 = -28.5F;
-        // int number2 = (int) Math.nextUp(val2);
-        // System.out.println(--number2);
+        // int number2 = (int) Math.nextDown(val2);
+        // System.out.println(number2);
         // String s = Boolean.toString(true); / "true"
         String s = Integer.toString(1); // "1"
         // String s = Float.toString(23.0f); // "23.0"
@@ -49,8 +49,8 @@ public class Practice5 {
         // System.out.println(Arrays.binarySearch(arr, 9));
         // Boolean bool = Boolean.FALSE;
         // System.out.println(bool);
-        int val = 10;
-        System.out.printf("%d", (val << 2));
+        int val3 = 10;
+        System.out.printf("%d", (val3 << 2));
     }
 
 }

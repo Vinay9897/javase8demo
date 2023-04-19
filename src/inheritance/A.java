@@ -7,27 +7,31 @@ interface D {
 }
 
 public class A {
+    static int a = 1;
+
     // constructor
     A() {
-        System.out.println("A");
+        System.out.println("Constructor A");
     }
 
     // if the method visibility is private then it is not accessible
-    private static final void display() {
-        System.out.println("Display method in A");
-    }
+    // public static void display() {
+    // System.out.println("Display method in A");
+    // }
 
 }
 
 class B extends A implements D {
+    // static int a = 9;
+
     B() {
-        System.out.println("B");
+        System.out.println("constructor B");
         display();
     }
 
     // this method has no connection with parent method
-    private static final void display() {
-        System.out.println("sldjs");
+    public static final void display() {
+        System.out.println("method B");
     }
 
     @Override
@@ -36,8 +40,9 @@ class B extends A implements D {
     }
 
     public static void main(String[] args) {
+
         B b = new B();
-        b.define();
+        b.display();
         String s = null;
         System.out.println(s);
         List<Double> list = new ArrayList<Double>();
@@ -93,6 +98,7 @@ class Derived extends Base {
     // }
 
     public static void main(String[] args) {
+        // System.out.println(B.a);
         Base b = new Base("BaseName"); // only base constructor invoked
         method2();
         b.method(2);

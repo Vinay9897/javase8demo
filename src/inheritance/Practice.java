@@ -71,12 +71,12 @@ public class Practice {
         float fo = 21.32f;
         String st = "pokemdjslomn";
         System.out.printf("|%15f|%n", fo);
-        System.out.printf("|%0,15.3f|%n", fo);
+        System.out.printf("|%0,15.3f|%n", fo);// 21.32f;
         System.out.printf("|%,15f|%n", fo);
         System.out.printf("|%+,15f|%n", fo);
         System.out.printf("|%-,15f|%n", fo);
 
-        System.out.printf("|%15d|", fi);
+        System.out.printf("|%15d|", fi);// 128890;
         System.out.println();
         System.out.printf("|%0,15d|", fi);
         System.out.println();
@@ -88,11 +88,13 @@ public class Practice {
 
         String str = "hello";
         String str12 = "vinay";
-        System.out.printf("|%-10s| %2s %n", str, str12);
-        System.out.printf("%s, %s \n", str, str12);
-        System.out.printf("%2$s %1$s %n", str, str12);
-        System.out.printf("%2$s %2$s %n", str, str12);
-        System.out.printf("%1$s %1$s %n", str, str12);
+        System.out.printf("|%-10s|%2s %n", str, str12);// |hello |vinay
+        System.out.printf("|%-10S| %2S %n", str, str12);// |HELLO | VINAY
+        System.out.printf("|%-5.3s|%2.6s %n", str, str12);// |hel |vi
+        System.out.printf("%s, %s \n", str, str12);// hello, vinay
+        System.out.printf("%2$s %1$s %n", str, str12);// vinay hello
+        System.out.printf("%2$s %2$s %n", str, str12);// vinay vinay
+        System.out.printf("%1$s %1$s %n", str, str12);// hello hello
 
     }
 }

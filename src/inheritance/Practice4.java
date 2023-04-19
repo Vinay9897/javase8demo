@@ -6,15 +6,20 @@ public class Practice4 {
     String value3 = "3";
     {
         // CODE SNIPPET 1
-        value2 = "a";
+        // value2 = "a";
         value3 = "a";
     }
     static {
         // CODE SNIPPET 2
-        value2 = "a";
+        value2 = "c";
+        System.out.println(value2);
     }
     static {
         value2 = "a";
+    }
+
+    public static void main(String[] args) {
+        System.out.println(value2);
     }
 
 }
@@ -39,6 +44,7 @@ class Order {
 
 class OrderDriver {
     public static void main(String[] args) {
+
         // new Order();
         // System.out.print(Order.result + " "); // ucr
         // System.out.print(Order.result + " ");// ucr
@@ -123,7 +129,7 @@ class Mouse {
         this(13, numTeeth, 6); // calls constructor with 3 parameters
     }
 
-    public Mouse(int weight, int numTeeth, int numWhiskers) {
+    protected Mouse(int weight, int numTeeth, int numWhiskers) {
         this.weight = weight;
         this.numTeeth = numTeeth;
         this.numWhiskers = numWhiskers;
