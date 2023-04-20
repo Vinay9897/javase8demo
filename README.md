@@ -180,3 +180,64 @@ Here username is represented as a String literal.String literals are created in 
 
 ---Always remember that string literals are not eligible for garbage collection throughout the application. On the other hand, String objects can be garbage collected.
 
+//***************generics
+
+Generics are used for creating interfaces, methods, and classes that specify the object type on which they work as a parameter.
+
+They were introduced in Java 5, and provide the following advantages:
+
+Compile-time type checking is done
+
+Casting is eliminated
+
+Can implement Generic algorithms
+
+The syntax for a generic class is :
+class class-name<type-parameter-list> { }
+
+type parameter is defined by a single letter of capital and is usually one of the E (element), T (type), K (key), N(number) and V (value).
+
+A generic type of value can be returned by a generic method.
+
+A generic method can be present in a non-generic class.
+
+Generics in Java allow wildcard constructs to denote a family of types. They can be categorized as follows:
+
+? extends T - Upper-bounded wildcard which supports types that are T or its sub-types.
+
+? super T - Lower-bounded wildcard which supports types that are T or its super-types.
+
+? - Unbounded wildcard which supports all types.
+
+We know arrays have advantages like
+
+Type checking is done at Compile time
+
+Ability to hold objects as well as primitive type data
+
+However, they can not grow and shrink dynamically. In addition, they do not have an integrated algorithm for sorting or searching.
+
+To overcome these disadvantages, Java gives us the Collections Framework
+
+The collections framework offers many interfaces and classes for manipulating and representing collections. Introduced in J2SE 1.2, it regulates the way we access data and store using collections. All these are in java.util package.
+
+The framework has the following advantages:
+
+Ready to use classes and algorithms
+
+Better program speed and quality
+
+Reduced programming effort
+
+Collections.sort() will work on any kind of element which implements the Comparable interface.
+Usually, the in-built Java classes like String, Date, etc. implement the Comparable interface, and hence, sort() works on them.
+
+This means that sort() will not work on user-defined classes on its own. As in our case, the Course class will need to implement the Comparable interface.
+
+The Comparable Interface is a part of the java.lang package. It has a single method compareTo() which should return a negative, zero or a positive number based on the comparison.
+
+TreeSet and TreeMap classes automatically use the compareTo() method to sort elements when they are added.
+So the objects of classes overriding compareTo() will automatically be sorted if they are added to TreeSet or TreeMap
+
+Best practice: Implement the Comparable interface to custom types, when their elements are added to collections which will sort elements by natural ordering ex: TreeSet and TreeMap. It also helps to sort elements in a List collection based on the natural ordering of the elements.
+
