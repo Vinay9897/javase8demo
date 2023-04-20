@@ -249,3 +249,34 @@ A class can implement the Comparator interface to define a comparison logic in i
 
 The Comparator interface is a part of the java.util package. It has a single method compare() that needs to return a negative, zero or a positive number based on the comparison.
 
+A regular expression is a sequence of characters that form a search pattern. It is mainly used in pattern matching for searching and editing.
+Regular expressions are most widely used for validating details entered in a form.
+
+The regex API is distributed under the java.util.regex package and provides classes to work with regular expressions.
+
+This regex API is used by the String class in four methods:
+matches(), split(), replaceFirst(), replaceAll()
+
+The regex API gives us the following:
+
+MatchResult interface
+
+Matcher class
+
+Pattern class
+
+PatternSyntaxException class
+
+Best practice: It's preferred to use Pattern and Matcher classes than String.matches, as it compiles the regular expression each time they are called.
+
+
+Inner Class
+A class can host another class called inner class.
+An inner class can contain member methods and member variables just as any other class.
+Members of an instance of the inner class can access an instance of an outer class because an inner class is just another member of the outer class. Inner classes can also access the outer class's private members.
+An inner class can be static.
+An inner class can have private, protected, public, or package access.
+ 
+
+The Pattern and Matcher classes are the most widely used.
+
