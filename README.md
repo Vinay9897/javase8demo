@@ -241,3 +241,11 @@ So the objects of classes overriding compareTo() will automatically be sorted if
 
 Best practice: Implement the Comparable interface to custom types, when their elements are added to collections which will sort elements by natural ordering ex: TreeSet and TreeMap. It also helps to sort elements in a List collection based on the natural ordering of the elements.
 
+Since our Course class already implements compareTo() to sort according to the courseName, we'll need an additional component to define another comparison logic.
+
+This can be done with Comparator Interface.
+
+A class can implement the Comparator interface to define a comparison logic in its compare() method. An object of this is passed along with a list to the sort() method.
+
+The Comparator interface is a part of the java.util package. It has a single method compare() that needs to return a negative, zero or a positive number based on the comparison.
+
