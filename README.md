@@ -308,6 +308,10 @@ BufferedReader and BufferedWriter are used to create buffered character stream
 Stream Chaining
 The process of passing a FileReader instance to a BufferedReader object is called chaining.
 
+The OutputStreamWriter class can be used for this. It converts character stream data to byte stream data by wrapping the OutputStream. 
+
+
+
 
 
 

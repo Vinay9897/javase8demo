@@ -1,6 +1,5 @@
 package io_streams;
 
-import java.io.File;
 import java.io.FileInputStream;
 
 public class InputFileStream {
