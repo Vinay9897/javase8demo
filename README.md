@@ -268,6 +268,7 @@ Pattern class
 PatternSyntaxException class
 
 Best practice: It's preferred to use Pattern and Matcher classes than String.matches, as it compiles the regular expression each time they are called.
+The Pattern and Matcher classes are the most widely used.
 
 
 Inner Class
@@ -277,6 +278,10 @@ Members of an instance of the inner class can access an instance of an outer cla
 An inner class can be static.
 An inner class can have private, protected, public, or package access.
  
+If we can access the inner class from outside then why can't we create normal class instead of creating an inner class?
+An inner class is a logical group of classes that are used in one place, i.e. if a class is used mostly by only one other class keep them together which leads to more maintainable code that is easily readable. It also increases encapsulation because inner classes can be declared private.
+According to our scenario, the Grade class can be used by the Manager class only. So we put them together and make the inner class private so that it cannot be accessed from outside.
 
-The Pattern and Matcher classes are the most widely used.
+
+
 
