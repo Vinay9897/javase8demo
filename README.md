@@ -282,6 +282,32 @@ If we can access the inner class from outside then why can't we create normal cl
 An inner class is a logical group of classes that are used in one place, i.e. if a class is used mostly by only one other class keep them together which leads to more maintainable code that is easily readable. It also increases encapsulation because inner classes can be declared private.
 According to our scenario, the Grade class can be used by the Manager class only. So we put them together and make the inner class private so that it cannot be accessed from outside.
 
+FileReader and FileWriter
+
+Character Streams
+Character Streams read data from the source and write data to the destination in the form of characters (16 bit Unicode).
+
+All character stream classes are derived from the following two abstract classes:
+
+java.io.Reader: Used for reading data in the form of characters
+
+java.io.Writer: Used for writing data in the form of characters
+
+Buffered Streams
+
+When data is read and written, a byte or character at a time, it is a very expensive operation due to frequent disk access.
+This can be optimized by buffering a group of bytes or characters together and then making use of them.
+
+Buffering helps to store an entire block of values into a buffer, and then make the data available for use.
+There are four buffered stream classes:
+
+BufferedInputStream and BufferedOutputStream help in creating buffered byte streams
+
+BufferedReader and BufferedWriter are used to create buffered character stream
+
+Stream Chaining
+The process of passing a FileReader instance to a BufferedReader object is called chaining.
+
 
 
 
