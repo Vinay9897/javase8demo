@@ -310,7 +310,29 @@ The process of passing a FileReader instance to a BufferedReader object is calle
 
 The OutputStreamWriter class can be used for this. It converts character stream data to byte stream data by wrapping the OutputStream. 
 
+Random Access File
 
+There is a requirement to write the Edford university's name at the end of all the files that are specific to the university. This calls for inserting content into existing files.
+
+For such requirements, where you need random access inside the file, Java provides RandomAccessFile.
+
+The java.io.RandomAccessFile class denotes a random access file that behaves similar to a large sized array of bytes which is stored in the file system.
+It offers a seek feature that can take us directly to a particular position in the file.
+
+Unlike InputStream and OuputStream classes of java.io package, RandomAccessFile can be used for performing both read and write operations. Also, it inherits neither InputStream nor OutputStream. In fact, it implements both DataInput and DataOutput interfaces.
+
+Serialization
+
+The process that converts an object into a stream/series of bytes is called Serialization.
+For any object to be serialized, the concerned class must implement the java.io.Serializable interface.
+Serializable is simply a marker interface (has no body) that is used to "mark" Java classes to support serialization.
+
+Serialization can be achieved by using the ObjectOutputStream class.
+
+Deserialization
+
+Deserialization is the process that reads an object from a stream/series of bytes.
+ObjectInputStream can also be involved in this process.
 
 
 
