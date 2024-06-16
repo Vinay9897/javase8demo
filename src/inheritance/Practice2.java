@@ -1,8 +1,5 @@
 package inheritance;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Practice2 {
 
     String name;
@@ -20,7 +17,7 @@ public class Practice2 {
     // return a;
     // }
     public static void main(String[] args) {
-        new Practice3("Bob");
+        new Practice33("Bob");
         // System.out.println(setVar(2, 4.5, 6));
 
         // Question 1 Answer:-RuntimeError, java.lang.StringIndexOutOfBoundsException
@@ -149,10 +146,10 @@ public class Practice2 {
     }
 }
 
-class Practice3 extends Practice2 {
+class Practice33 extends Practice2 {
     String name;
 
-    public Practice3(String name) {
+    public Practice33(String name) {
         super(name);
         System.out.println("Practice3");
     }

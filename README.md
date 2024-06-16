@@ -334,6 +334,58 @@ Deserialization
 Deserialization is the process that reads an object from a stream/series of bytes.
 ObjectInputStream can also be involved in this process.
 
+*****************
+FunctionalInterface
+*****************
+
+The interface who contains only one abstract method
+but can have mulitple default and static method is called functional interface.
+
+ex: - Runnable --> run(), Callable --> call(), Comparable --> compareTo(), Comparator --> compare(), 
+these interfaces have only one abstract method
+
+
+
+*****************
+Consumer<T>
+*****************
+
+Consumer<T> is an in-built functional interface in java 8
+Consumer consume the input and doesn't return anything
+
+In Consumer object need to be consumed i.e take as input, and some operation is to
+be performed on the object without returning any result;
+
+
+
+*****************
+ <<T>> Supplier
+*****************
+
+Supplier is an in-built functional interface in java 8
+
+Supplier return the output and doesn't take any anything
+
+
+*****************
+Predicate<T>
+*****************
+
+Predicate is an in-built functional interface in java 8
+Predicate return true if input match the predicate otherwise false
+
+*****************
+static keyword
+*****************
+
+
+1) static method can be call directly with method name
+2) we can't override the static method
+
+
+
+
+
 
 
 
