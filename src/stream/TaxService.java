@@ -1,5 +1,6 @@
 package stream;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -9,6 +10,14 @@ public class TaxService {
         return DataBase.getEmployees().stream().filter(emp -> emp.getSalary() > 50000).collect(Collectors.toList());
         else
             return  DataBase.getEmployees().stream().filter(emp -> emp.getSalary() < 50000).collect(Collectors.toList());
+    }
+
+    public static List<Employee> salaryWise(String type) {
+        return (type.equalsIgnoreCase("salary"))
+                ? DataBase.getEmployees().stream().sorted(Comparator.comparingInt(Employee::getSalary).reversed()).collect(Collectors.toList())
+                :
+                DataBase.getEmployees().stream().sorted(Comparator.comparing(Employee::getName).reversed()).collect(Collectors.toList());
+
     }
 
     public static void main(String[] args) {
@@ -32,6 +41,7 @@ public class TaxService {
         dataBase.addEmployee(emp4);
 
         evaluateTaxUsers("taxx").stream().forEach(val -> System.out.println(val.getName()));
+        salaryWise("salary").forEach(val -> System.out.println(val.getName()));
 
     }
 
