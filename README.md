@@ -425,6 +425,17 @@ Functional Programming
 Code Reduce
 Bulk Operation
 
+# Difference between java 8 map() and flatMap()
+
+                           map()                                    flatMap()
+1) It processes stream of values                          It processes stream of stream of values
+2) It does only mapping                                   It performs mapping as well as flattening
+   3) It's mapper function produces single value          It's mapper function produces multiple values for 
+   for each input value.                                  each input.
+4) It is a One-To-One mapping                             It is a One-To-Many mapping
+
+
+
 
 
 
