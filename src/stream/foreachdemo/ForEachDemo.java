@@ -37,8 +37,26 @@ public class ForEachDemo {
         map.put("c",3);
         map.put("d",4);
         map.put("e",5);
+
         // Bi-Consumer
         map.forEach((key,val) -> System.out.println(key +" " + val));
+
+        // map sort
+        ArrayList<Map.Entry<String,Integer>> sortMap = new ArrayList<>(map.entrySet());
+//        Collections.sort(sortMap, Comparator.comparing(Map.Entry::getKey));
+        Collections.sort(sortMap, Map.Entry.comparingByKey());
+        for(Map.Entry<String, Integer> entry : sortMap){
+           System.out.print(entry.getKey() + " " + entry.getValue());
+        }
+
+        map.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(System.out::println);
+
+
+
+
+
+
+        // unique traverse
         map.entrySet().stream().forEach(obj ->System.out.println(obj));
     }
 

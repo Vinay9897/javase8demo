@@ -40,8 +40,8 @@ public class TaxService {
         dataBase.addEmployee(emp3);
         dataBase.addEmployee(emp4);
 
-        evaluateTaxUsers("taxx").stream().forEach(val -> System.out.println(val.getName()));
-        salaryWise("salary").forEach(val -> System.out.println(val.getName()));
+        evaluateTaxUsers("taxx").stream().forEach(System.out::println);
+        salaryWise("salary").forEach(System.out::println);
 
     }
 
