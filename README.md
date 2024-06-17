@@ -1,9 +1,10 @@
 # javase8demo
-//Exceptions
+
+*****************
+Exceptions
+*****************
 
 Exception class is the superclass of all other exceptions and it extends Throwable class.
-
-
 
 In Java, java.lang.Exception class is the superclass of all exception objects. These objects contain the stack trace and all information regarding the exception.
 
@@ -69,13 +70,15 @@ Checked exceptions occur at compile time, and should be handled or declared for 
 
 Unchecked exceptions occur at runtime, and need not be handled or declared for propagation.
 
+*****************
 User-Defined Exceptions
+*********************
 
 1)By extending the Exception class, we can define a user defined exception class:
 public class MyDivException extends Exception { }
 2)Using parameterized constructor:
 public MyDivException(String message) {
-       super(message);
+super(message);
 }
  
 example:-
@@ -86,16 +89,18 @@ public static void divide(int x, int y) throws MyDivException {
        System.out.println(z);
 }
  By extending the RuntimeException class the custom exception becomes unchecked.
-
-//Enums
+*****************
+Enums
+*****************
 
 --An enum is a non-primitive data type that contains a fixed set of constants.
 --All the constants are static and final implicitly.
 --All enums implicitly extend java.lang.Enum class.
 Since enums are reference data types, like class or interface, and hence, --we can define constructors, methods, and variables in an enum.
 
-
-//Abstract
+*****************
+Abstract
+*****************
 
 --An abstract class cannot be instantiated using the new keyword.
 The subclass of an abstract class can be only instantiated if it provides the implementation for all the abstract methods.
@@ -105,8 +110,9 @@ An abstract class can also have concrete methods i.e. methods with implementatio
 --An abstract class reference can be assigned an object of its subclass, thereby achieving run-time polymorphism.
 ---All the abstract methods have been overridden in the subclass with their own implementations.
 
-
-// Interface
+*****************
+Interface
+*****************
 
 --An interface defines a contract for a class.
 --Objects can't be created for interface and an interface cannot have private or protected members.
@@ -115,8 +121,9 @@ An abstract class can also have concrete methods i.e. methods with implementatio
  --If at least one abstract method of the interface has not been overridden by the class that implemented the interface, make it abstract.
 --Inheritance is possible in an interface and it supports multiple inheritance.
 
-
-//package
+*****************
+package
+*****************
 
 --a package is a grouping mechanism in Java that contains all related classes and interfaces.
 --The package is a folder that contains all these related classes and interfaces.
@@ -128,8 +135,9 @@ An abstract class can also have concrete methods i.e. methods with implementatio
 
 --An interface or class can be reused multiple times by multiple programs.
 
-
-//Java libraries
+*****************
+Java libraries
+*****************
 
 Java comes with a good set of API (Application programming interface). API is a set of all classes that are all a part of the JDK. It includes all Java packages, classes, and interfaces. These prewritten classes provide tremendous support to a developer while developing an application
 
@@ -158,8 +166,9 @@ String toString()-->	Gives the String representation of any object
 --hashCode() from object class can be overridden according to the business requirement.
 --String Class's overridden hashCode() derives hash code by taking the content of the string.
 
-
-//Wrapper Classes
+*****************
+Wrapper Classes
+*****************
 
 --Java automatically converts primitives into wrapper objects and vice versa
 --Autoboxing features help avoid explicit calls to the constructor
@@ -180,7 +189,9 @@ Here username is represented as a String literal.String literals are created in 
 
 ---Always remember that string literals are not eligible for garbage collection throughout the application. On the other hand, String objects can be garbage collected.
 
-//***************generics
+*****************
+generics
+*****************
 
 Generics are used for creating interfaces, methods, and classes that specify the object type on which they work as a parameter.
 
@@ -270,8 +281,10 @@ PatternSyntaxException class
 Best practice: It's preferred to use Pattern and Matcher classes than String.matches, as it compiles the regular expression each time they are called.
 The Pattern and Matcher classes are the most widely used.
 
-
+*****************
 Inner Class
+*****************
+
 A class can host another class called inner class.
 An inner class can contain member methods and member variables just as any other class.
 Members of an instance of the inner class can access an instance of an outer class because an inner class is just another member of the outer class. Inner classes can also access the outer class's private members.
@@ -284,7 +297,10 @@ According to our scenario, the Grade class can be used by the Manager class only
 
 FileReader and FileWriter
 
+*****************
 Character Streams
+*****************
+
 Character Streams read data from the source and write data to the destination in the form of characters (16 bit Unicode).
 
 All character stream classes are derived from the following two abstract classes:
@@ -293,7 +309,9 @@ java.io.Reader: Used for reading data in the form of characters
 
 java.io.Writer: Used for writing data in the form of characters
 
+*****************
 Buffered Streams
+*****************
 
 When data is read and written, a byte or character at a time, it is a very expensive operation due to frequent disk access.
 This can be optimized by buffering a group of bytes or characters together and then making use of them.
@@ -304,14 +322,17 @@ There are four buffered stream classes:
 BufferedInputStream and BufferedOutputStream help in creating buffered byte streams
 
 BufferedReader and BufferedWriter are used to create buffered character stream
-
+*****************
 Stream Chaining
+*****************
+
 The process of passing a FileReader instance to a BufferedReader object is called chaining.
 
 The OutputStreamWriter class can be used for this. It converts character stream data to byte stream data by wrapping the OutputStream. 
 
+*****************
 Random Access File
-
+*****************
 There is a requirement to write the Edford university's name at the end of all the files that are specific to the university. This calls for inserting content into existing files.
 
 For such requirements, where you need random access inside the file, Java provides RandomAccessFile.
@@ -321,15 +342,18 @@ It offers a seek feature that can take us directly to a particular position in t
 
 Unlike InputStream and OuputStream classes of java.io package, RandomAccessFile can be used for performing both read and write operations. Also, it inherits neither InputStream nor OutputStream. In fact, it implements both DataInput and DataOutput interfaces.
 
+*****************
 Serialization
-
+*****************
 The process that converts an object into a stream/series of bytes is called Serialization.
 For any object to be serialized, the concerned class must implement the java.io.Serializable interface.
 Serializable is simply a marker interface (has no body) that is used to "mark" Java classes to support serialization.
 
 Serialization can be achieved by using the ObjectOutputStream class.
 
+*****************
 Deserialization
+*****************
 
 Deserialization is the process that reads an object from a stream/series of bytes.
 ObjectInputStream can also be involved in this process.
@@ -381,6 +405,32 @@ static keyword
 
 1) static method can be call directly with method name
 2) we can't override the static method
+
+
+*****************
+Stream API
+*****************
+
+1) Stream API is used to process collections of objects.
+2) A sequence of objects that supports various methods which can be
+pipelined to produce the desired result.
+3) A stream is not a data structure instead it takes input from Collections, 
+Arrays or I/O channels.
+4) Stream doesn't change the original structure, they only provide the result as 
+ per the pipelined methods.
+
+# Why we can Stream
+
+Functional Programming
+Code Reduce
+Bulk Operation
+
+
+
+
+
+
+
 
 
 
